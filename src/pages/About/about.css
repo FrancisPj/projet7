@@ -1,0 +1,37 @@
+.mainAboutContainer {
+    width: auto;
+    padding-inline: 100px;
+    /*min-height: 80vh;*/
+}
+
+.aboutContainer{
+    display: flex;
+    justify-content: center;
+}
+.collapseAbout{
+    width: 90%;
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+
+/*Deskop*/
+@media screen and (max-width: 750px) {
+
+    .mainAboutContainer {
+        padding-inline: 20px;
+        min-height: 0;
+    }
+    .collapseAbout{
+        width: 100%;
+        font-size: 15px;
+         }
+}
+
+/*Mobile*/
+@media screen and (max-device-width: 375px) {
+    .mainAboutContainer {
+        padding-inline: 30px;
+
+    }
+}

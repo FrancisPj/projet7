@@ -1,0 +1,14 @@
+.mainContainer {
+    width: auto;
+    padding-inline: 100px;
+    min-height: 100%;
+}
+
+/*Deskop*/
+@media screen and (max-width: 750px) {
+
+    .mainContainer {
+        padding-inline: 20px;
+    }
+
+}

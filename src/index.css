@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  background-color: rgb(255,255,255);
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+/*code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
+
