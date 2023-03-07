@@ -4,11 +4,11 @@
     justify-content: space-between;
     background: #FF6060;
     padding: 1rem;
-    /*font-weight: bold;*/
     border-radius: 5px;
     color: white;
-    /*font-size: 24px;*/
     height: 40px;
+    z-index: 1;
+    position: relative;
 }
 
 .accordionTitle:hover,.active .accordionTitle {
@@ -22,13 +22,14 @@
     overflow: hidden;
     padding: 0 1rem;
     transition: all .15s ease-in;
+    margin-top: -15px;
 }
 
 .active .accordionContent {
     display: block;
     visibility: visible;
     overflow: visible;
-    padding: 1rem;
+    padding: 30px;
     transition: 0.3s;
     opacity: 1;
     border-radius: 5px;
