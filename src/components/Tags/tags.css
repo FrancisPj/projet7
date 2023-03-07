@@ -1,8 +1,8 @@
 .Tags-container {
-    width: 80%;
+    /*width: 80%;*/
     margin-top: 20px;
     margin-bottom: 24px;
-    height: 25px;
+    /*height: 25px;*/
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -27,7 +27,7 @@
 @media screen and (max-width: 900px) {
     .tags {
         font-size: 10px;
-        width: 95px;
+        width: 120px;
     }
     .Tags-container {
         width: 100%;

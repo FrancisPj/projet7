@@ -19,13 +19,14 @@
 }
 
 .bannerTxt{
-  height: auto;
-  width:100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  font-size: 44px;
-  color: white;
+    padding: 20px;
+      height: auto;
+      width:100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      font-size: 44px;
+      color: white;
 }
 
 /*Tablette*/
@@ -33,27 +34,26 @@
     .banner{
         height:120px ;
     }
-    .bannerhome{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
+    .bannerHome{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
     }
     .bannerTxt{
-    padding: 0 5px;
-    font-size: 20px;
-    font-weight: 500;
+        font-size: 25px;
+        font-weight: 500;
     }
 }
 /*Mobile*/
 @media screen and (max-device-width: 375px) {
     .bannerTxt{
         padding: 0 5px;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 600;
     }
     .banner{
-    height:100px ;
+        height:100px ;
     }
 }

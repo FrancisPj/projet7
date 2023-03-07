@@ -1,0 +1,15 @@
+.star {
+    font-size:25px;
+    color:  grey;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.selected {
+   /* background: #FF6060;*/
+    color: #FF6060;
+}
+.starsRating {
+    gap: 2px ;
+}

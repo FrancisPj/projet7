@@ -1,17 +1,20 @@
 import data from '../../data/logement_data.json';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+
 
 import Tags from "../../components/Tags/tags";
 import Collapse from "../../components/Collapse/collapse";
 import './house.css'
+import Slider from "../../components/Slider/slider";
+import {StarRating} from "../../components/StarRating/starRating";
 
-import React from "react";
+
 
 /*import Slider from "../Slider/slider";*/
 
 // Le composant fonction parent qui appelle les composants fonction enfants
-function logement() {
+function Appart() {
     // On récupere l'id dans la constante "productId"
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const {productId} = useParams();
@@ -21,19 +24,46 @@ function logement() {
     const {title, location, rating, host: {name, picture}, equipments, description, pictures} =
         logement;
 
+    const [ setLogement] = useState(null);
+
+    useEffect(() => {
+        fetch("logement_data.json")
+            .then(response => response.json())
+            .then(data => setLogement(data));
+    }, []);
+
+
+    // const [logement, setLogement] = useState({
+    //     tags: [],
+    //     pictures: [],
+    //     rating: "",
+    //        })
+    //
+    //
+    //
+    // useEffect(() => {
+    //     data.map((house) => {
+    //         if(house.id === productId){
+    //             setLogement(house)
+    //         }
+    //         return null
+    //     });
+    // }, [productId])
+
+
     return (
         <>
-            {/*<Slider />*/}
+
             <section className={'logement'}>
                 <div>
-                    <div className={'div'}>
-                        <img src="" alt=""/>
-                    </div>
+
+                        <Slider pictures={ logement.pictures } />
+
                 </div>
 
                 <div className={'logement_container'}>
 
-                    <div className="logement_infos_loc">
+                    <div className={'logement_infos_loc'}>
                         <h1 className={'logement_title'}>{title}</h1>
                         <p className={'logement_location'}>{location}</p>
 
@@ -46,10 +76,11 @@ function logement() {
                         <div className="logement_users">
                             <h3>{name}</h3>
                             <img src={picture} alt={'Propriétaire du logement'}/>
+                        </div >
 
-                        </div>
-                        {/*<div className={'logement_host'}>*/}
-                        {/*</div>*/}
+
+                            {logement && logement.rating && <StarRating rating={logement.rating} />}
+
 
                     </div>
                 </div>
@@ -63,15 +94,6 @@ function logement() {
             </section>
         </>
     )
-
-// 1 Récupérer l'id du produit dans l'url
-// 2 Récupérer la data depuis le fichier data en fonction de l'id
-// 3 Afficher les informations dans la page ou dans les composants
-
-// const rating = [1, 2, 3, 4, 5]
-//  const [logement, setLogement] =[0]
-
-
 }
 
-export default logement;
+export default Appart;

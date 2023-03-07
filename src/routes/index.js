@@ -11,7 +11,7 @@ import About from "../pages/About/about";
 import LayoutDefault from "../layouts/LayoutDefault"
 import LayoutBlank from "../layouts/LayoutBlank";
 import Error from "../pages/Error/error";
-import Logement from "../pages/Logement/house";
+import Appart from "../pages/Logement/house";
 
 const Router = () => {
     return (
@@ -22,7 +22,7 @@ const Router = () => {
                 <Route element={<LayoutDefault/>}>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>} />
-                    <Route path="logement/:productId" element={<Logement/>}/>
+                    <Route path="logement/:productId" element={<Appart/>}/>
                 </Route>
 
                 <Route element={<LayoutBlank/>}>

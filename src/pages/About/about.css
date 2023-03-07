@@ -1,12 +1,14 @@
 .mainAboutContainer {
     width: auto;
     padding-inline: 100px;
-    /*min-height: 80vh;*/
+    flex-grow: 1;
+
 }
 
 .aboutContainer{
     display: flex;
     justify-content: center;
+
 }
 .collapseAbout{
     width: 90%;

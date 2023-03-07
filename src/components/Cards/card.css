@@ -15,12 +15,12 @@
      width: 100%;
 }
 .cartGrid {
+     margin-top: 25px;
      border-radius: 10px;
      display: inline-block;
      width: 340px;
      height: 340px;
      position: relative;
-     margin: 25px;
      overflow: hidden;
 }
 .cartGrid:before {
@@ -59,7 +59,7 @@
      }
      .cartGrid{
           width: 100%;
-          margin-top: 10px;
+          margin-top: 20px;
      }
      .cart-container{
           margin: 0;
