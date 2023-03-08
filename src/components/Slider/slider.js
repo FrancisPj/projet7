@@ -1,47 +1,43 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState } from 'react';
 import './slider.css'
 
 
 const ImageSlider = ( {pictures} ) => {
-  /*  const chevron = <i className="fa-solid fa-chevron-left"/>;*/
-    const [currentIndex, setCurrentIndex] = useState(0);
+     const [currentIndex, setCurrentIndex] = useState(0);
 
-   /* const goToPrevSlide = () => {
-        const lastIndex = pictures.length - 1;
-        const shouldResetIndex = currentIndex === 0;
-        const index = shouldResetIndex ? lastIndex : currentIndex - 1;
+     /* La variable isSingleImage évalue si le nombre d'images est égal à 1 */
+    const isSingleImage = pictures.length === 1;
 
-        setCurrentIndex(index);
+    const nextSlide = () => {
+        setCurrentIndex(currentIndex === pictures.length - 1 ? 0 : currentIndex + 1);
     };
 
-    const goToNextSlide = () => {
-        const lastIndex = pictures.length - 1;
-        const shouldResetIndex = currentIndex === lastIndex;
-        const index = shouldResetIndex ? 0 : currentIndex + 1;
-
-        setCurrentIndex(index);
-    };*/
-
+    const prevSlide = () => {
+        setCurrentIndex(currentIndex === 0 ? pictures.length - 1 : currentIndex - 1);
+    };
 
     return (
         <div className="carousel">
             <div className="slide">
-                <img style={{ backgroundImage: `url(${pictures[currentIndex]})` }} alt={''}/>
-
-             {/*   <button className="prev" onClick={goToPrevSlide}>{chevron}</button>
-                <button className="next" onClick={goToNextSlide}>{chevron}</button>*/}
+                <img src={pictures[currentIndex]} alt="" />
             </div>
-            <div className="count">{currentIndex + 1}/{pictures.length}</div>
-            <button className="prev" onClick={() => setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length)}>
-                &#10094; {/*entité HTML pour le caractère « moins que » ou « inférieur à » (<).*/}
-            </button>
-            <button className="next" onClick={() => setCurrentIndex((currentIndex + 1) % pictures.length)}>
-                &#10095;
-            </button>
+
+            {/* Les boutons et le compteur sont dans (!isSingleImage) qui vérifie si isSingleImage est faux .Les boutons et le compteur seront affichés ou pas. */}
+            {!isSingleImage && (
+                <>
+                    <div className="count">
+                        {currentIndex + 1}/{pictures.length}
+                    </div>
+                    <button className="prev" onClick={prevSlide}>
+                        &#10094;
+                    </button>
+                    <button className="next" onClick={nextSlide}>
+                        &#10095;
+                    </button>
+                </>
+            )}
         </div>
     );
-}
-
+};
 
 export default ImageSlider;

@@ -1,26 +1,25 @@
+/* Importation des données du fichier JSON "logement_data.json". */
 import data from '../../data/logement_data.json';
+
+/* Importation des modules React nécessaires pour le composant, à savoir le module React, le hook useEffect et le hook useState. */
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import './house.css'
 
-
+/* Importation des composants  */
 import Tags from "../../components/Tags/tags";
 import Collapse from "../../components/Collapse/collapse";
-import './house.css'
 import Slider from "../../components/Slider/slider";
 import {StarRating} from "../../components/StarRating/starRating";
 import Error from '../Error/error';
 
-// Le composant fonction parent qui appelle les composants fonction enfants
-function Appart() {
-    // On récupere l'id dans la constante "productId"
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const {productId} = useParams();
-// On mappe "data" pour récup l'appartement (et ses caractéristiques) qui a pour id celui renseigné dans les paramètres d'url
-   /* const logement = data.find((logement) => logement.id === productId);*/
-    // Destructuration :  permet directement de déclarer une variable et de lui assigner la valeur d'une propriété d'un objet
- /*   const {title, location, rating, host: {name, picture}, equipments, description, pictures} =
-        logement;*/
 
+function Appart() {
+
+    /*je récupère un identifiant de produit à partir de l'URL à l'aide du hook "useParams" de React Router" */
+    const {productId} = useParams();
+
+    /* J'utilise également le hook "useState" pour initialiser l'état du composant, pour stocker les données */
     const [logement, setLogement] = useState({
         title: [],
         location: [],
@@ -34,9 +33,13 @@ function Appart() {
 
          });
 
+    /* Si une erreur se produit lors de la récupération des données, elle est gérée à l'aide du hook "useState"  et un composant d'erreur est affiché. */
     const [error, setError] = useState(false);
 
+    /* J'utilise le hook "useEffect" pour déclencher la récupération des données et leur stockage dans l'état du composant. */
     useEffect(() => {
+
+        /* La méthode "find" pour rechercher dans le fichier JSON le logement correspondant à l'identifiant de produit extrait.*/
         const logementData = data.find((logement) => logement.id === productId);
         setLogement(logementData);
 
@@ -69,42 +72,12 @@ function Appart() {
         </div>;
     }
 
-
-    /*
-        useEffect(() => {
-            fetch("logement_data.json")
-                .then(response => response.json())
-                .then(data => setLogement(data));
-
-        }, []);*/
-
-
-    // const [logement, setLogement] = useState({
-    //     tags: [],
-    //     pictures: [],
-    //     rating: "",
-    //        })
-    //
-    //
-    //
-    // useEffect(() => {
-    //     data.map((house) => {
-    //         if(house.id === productId){
-    //             setLogement(house)
-    //         }
-    //         return null
-    //     });
-    // }, [productId])
-
-
     return (
         <>
 
             <section className={'logement'}>
                 <div>
-
                         <Slider pictures={ logement.pictures } />
-
                 </div>
 
                 <div className={'logement_container'}>

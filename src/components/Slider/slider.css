@@ -21,7 +21,7 @@
     object-position: 50% 50%;;
     border-radius: 25px;
     background-position: center;
-    background-size: cover;
+    background-objectFit: cover;
 }
 .prev,
 .next {
@@ -38,10 +38,6 @@
     outline: none;
     transition: all 0.3s ease-in-out;
 }
-
-/*.next{
-    transform: rotate( 180deg) translateY(25px);
-}*/
 
 .prev:hover,
 .next:hover {

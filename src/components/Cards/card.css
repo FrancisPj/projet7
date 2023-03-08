@@ -75,8 +75,7 @@
           position: relative;
           overflow: hidden;
           width: 100%;
-
-          margin: 0 ;
+          margin: 5px 0 ;
      }
      .cart_text {
           padding: 10px;

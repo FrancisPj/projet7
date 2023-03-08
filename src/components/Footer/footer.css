@@ -26,6 +26,7 @@
 @media screen and (max-width: 750px) {
    .footer .logo-white{
        height: 50px;
+       margin:auto;
    }
     .footer p {
         padding: 10px;
