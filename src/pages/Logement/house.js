@@ -8,10 +8,7 @@ import Collapse from "../../components/Collapse/collapse";
 import './house.css'
 import Slider from "../../components/Slider/slider";
 import {StarRating} from "../../components/StarRating/starRating";
-
-
-
-/*import Slider from "../Slider/slider";*/
+import Error from '../Error/error';
 
 // Le composant fonction parent qui appelle les composants fonction enfants
 function Appart() {
@@ -19,18 +16,67 @@ function Appart() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const {productId} = useParams();
 // On mappe "data" pour récup l'appartement (et ses caractéristiques) qui a pour id celui renseigné dans les paramètres d'url
-    const logement = data.find((logement) => logement.id === productId);
+   /* const logement = data.find((logement) => logement.id === productId);*/
     // Destructuration :  permet directement de déclarer une variable et de lui assigner la valeur d'une propriété d'un objet
-    const {title, location, rating, host: {name, picture}, equipments, description, pictures} =
-        logement;
+ /*   const {title, location, rating, host: {name, picture}, equipments, description, pictures} =
+        logement;*/
 
-    const [ setLogement] = useState(null);
+    const [logement, setLogement] = useState({
+        title: [],
+        location: [],
+        host:  [],
+        equipments: [],
+        description: [],
+        tags: [],
+        pictures: [],
+        picture: [],
+        rating: "",
+
+         });
+
+    const [error, setError] = useState(false);
 
     useEffect(() => {
-        fetch("logement_data.json")
-            .then(response => response.json())
-            .then(data => setLogement(data));
+        const logementData = data.find((logement) => logement.id === productId);
+        setLogement(logementData);
+
+        fetch("data.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors du chargement des données !");
+                }
+                return response.json();
+            })
+
+            .then(data => {
+                setLogement(data);
+            })
+
+            .catch((error) => {
+                console.error(error);
+                setError(false);
+            });
+
     }, []);
+
+    if (error) {
+        return <div>Une erreur est survenue !</div>;
+    }
+
+    if (!logement) {
+        return <div> Aucun logement trouvé !
+        {<Error />}
+        </div>;
+    }
+
+
+    /*
+        useEffect(() => {
+            fetch("logement_data.json")
+                .then(response => response.json())
+                .then(data => setLogement(data));
+
+        }, []);*/
 
 
     // const [logement, setLogement] = useState({
@@ -64,8 +110,8 @@ function Appart() {
                 <div className={'logement_container'}>
 
                     <div className={'logement_infos_loc'}>
-                        <h1 className={'logement_title'}>{title}</h1>
-                        <p className={'logement_location'}>{location}</p>
+                        <h1 className={'logement_title'}>{logement.title}</h1>
+                        <p className={'logement_location'}>{logement.location}</p>
 
                         <div className={'logement_tags'}>
                             <Tags logement={logement}/>
@@ -74,8 +120,8 @@ function Appart() {
 
                     <div className="user_stars">
                         <div className="logement_users">
-                            <h3>{name}</h3>
-                            <img src={picture} alt={'Propriétaire du logement'}/>
+                            <h3>{logement.host.name}</h3>
+                            <img src={logement.host.picture} alt={'Propriétaire du logement'}/>
                         </div >
 
 
@@ -86,8 +132,8 @@ function Appart() {
                 </div>
 
                 <div className={'logement_dropdowns'}>
-                    <Collapse title={'Description'} content={description}/>
-                    <Collapse title={'Equipments'} content={equipments.map((equipment, index) => (
+                    <Collapse title={'Description'} content={logement.description}/>
+                    <Collapse title={'Equipments'} content={logement.equipments.map((equipment, index) => (
                         <li className={'logement_list'} key={index}>{equipment}</li>
                     ))}/>
                 </div>
