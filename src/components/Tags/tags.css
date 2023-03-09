@@ -19,17 +19,28 @@
     background-color:#FF6060;
     color: white;
     border-radius: 10px;
-    width: fit-content;
+    width: 170px;
     height: 25px;
     white-space: nowrap;
 }
 
 @media screen and (max-width: 900px) {
-    .tags {
-        font-size: 10px;
-        width: 120px;
-    }
+
     .Tags-container {
         width: 100%;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 750px) {
+    .tags {
+        font-size: 7px;
+        width: 85px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 370px) {
+    .tags {
+        font-size: 7px;
+        width: 84px;
     }
 }

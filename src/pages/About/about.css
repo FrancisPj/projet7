@@ -21,7 +21,7 @@
 @media screen and (max-width: 750px) {
 
     .mainAboutContainer {
-        padding-inline: 20px;
+        padding-inline: 15px;
         min-height: 0;
     }
     .collapseAbout{
@@ -33,7 +33,7 @@
 /*Mobile*/
 @media screen and (max-device-width: 375px) {
     .mainAboutContainer {
-        padding-inline: 30px;
+      /*  padding-inline: 30px;*/
 
     }
 }

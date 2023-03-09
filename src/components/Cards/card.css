@@ -15,7 +15,7 @@
      width: 100%;
 }
 .cartGrid {
-     margin: 5px;
+     margin: 25px 5px;
      border-radius: 10px;
      display: inline-block;
      width: 340px;
@@ -47,6 +47,7 @@
      padding: 10px;
      font-size: 18px;
      text-align: left;
+     text-decoration:none;
 }
 
 

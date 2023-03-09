@@ -48,19 +48,17 @@ function Appart() {
                 if (!response.ok) {
                     throw new Error("Erreur lors du chargement des données !");
                 }
-                return response.json();
+                return response.json()
             })
 
             .then(data => {
                 setLogement(data);
             })
-
             .catch((error) => {
-                console.error(error);
                 setError(false);
             });
 
-    }, []);
+    }, [productId]);
 
     if (error) {
         return <div>Une erreur est survenue !</div>;

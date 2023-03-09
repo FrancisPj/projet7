@@ -56,12 +56,14 @@ nav li {
         display: flex;
         flex-wrap: nowrap;
         gap: 5px;
+        text-transform: uppercase;
     }
     ul li {
-        font-size: 15px;
+        font-size: 12px;
     }
     header {
         margin: 15px 20px 0 20px;
+        align-items: initial;
     }
 }
 
@@ -71,8 +73,18 @@ nav li {
        max-width: 100px;
    }
     ul {
-        flex-wrap: wrap;
         display: flex;
-        margin-left: 18px;
+        margin-left: 5px;
+
+    }
+    nav li {
+        margin: 0;
+        font-size: 12px;
+        padding-left: 5px;
+    }
+    .activated {
+
+        padding-left: 0;
+        font-weight: 500;
     }
 }
