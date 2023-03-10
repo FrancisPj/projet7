@@ -51,6 +51,7 @@ function Appart() {
                 return response.json()
             })
 
+            /*  Si le chargement réussit, les données sont stockées dans le state "logement" en utilisant la méthode setLogement. */
             .then(data => {
                 setLogement(data);
             })
@@ -60,19 +61,18 @@ function Appart() {
 
     }, [productId]);
 
+
     if (error) {
         return <div>Une erreur est survenue !</div>;
     }
 
     if (!logement) {
-        return <div> Aucun logement trouvé !
-        {<Error />}
+        return <div>
+            {<Error />}
         </div>;
     }
-
     return (
         <>
-
             <section className={'logement'}>
                 <div>
                         <Slider pictures={ logement.pictures } />
@@ -94,12 +94,9 @@ function Appart() {
                             <h3>{logement.host.name}</h3>
                             <img src={logement.host.picture} alt={'Propriétaire du logement'}/>
                         </div >
-
-
-                            {logement && logement.rating && <StarRating rating={logement.rating} />}
-
-
+                           {logement && logement.rating && <StarRating rating={logement.rating} />}
                     </div>
+
                 </div>
 
                 <div className={'logement_dropdowns'}>
@@ -108,6 +105,7 @@ function Appart() {
                         <li className={'logement_list'} key={index}>{equipment}</li>
                     ))}/>
                 </div>
+
             </section>
         </>
     )

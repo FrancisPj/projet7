@@ -11,4 +11,5 @@
 }
 .starsRating {
     gap: 2px ;
+    display: flex;
 }

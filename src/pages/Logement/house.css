@@ -8,8 +8,7 @@
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-}
+   }
 
 .logement_infos_loc{
     flex-direction: column;
@@ -62,7 +61,7 @@
 }
 .logement_users h3{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     font-size: 18px;
     font-weight: 500;
 }
@@ -71,7 +70,7 @@
     width: 100%;
     display: flex;
     position: relative;
-    gap: 10px;
+    gap: 60px;
     margin-top: 20px;
 }
 .logement_list {
@@ -138,7 +137,7 @@
         flex-direction: column;
     }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 300px) {
     .logement_users {
         align-items: center;
         flex-direction: column;
@@ -152,6 +151,6 @@
     .logement_users h3{
         display: flex;
 
-        align-items: end;
+        align-items: flex-end;
     }
 }

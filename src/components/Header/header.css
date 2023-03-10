@@ -74,8 +74,6 @@ nav li {
    }
     ul {
         display: flex;
-        margin-left: 5px;
-
     }
     nav li {
         margin: 0;
@@ -83,7 +81,6 @@ nav li {
         padding-left: 5px;
     }
     .activated {
-
         padding-left: 0;
         font-weight: 500;
     }

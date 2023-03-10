@@ -1,9 +1,8 @@
-//BrowserRouter : C'est le composant qui enveloppe tous les autres composants de routing.
-// Il fournit un contexte pour la navigation dans l'application.
-
+/*BrowserRouter : C'est le composant qui enveloppe tous les autres composants de routing.
+Il fournit un contexte pour la navigation dans l'application.*/
 //Routes :Ce composant définit les différentes routes dans l'application.
-
 //Route :Ce composant représente une seule route.
+
 import React from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from "../pages/Home/home";

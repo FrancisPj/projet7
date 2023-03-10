@@ -2,7 +2,7 @@ import React from "react";
 import bannerImg from "../../assets/bannerHome.png"
 import "./bannerHome.css"
 
-
+/* création d'un composant appelé "Banner".*/
 function Banner () {
 
 return (
