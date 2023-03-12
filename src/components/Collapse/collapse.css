@@ -60,11 +60,9 @@
 }
 /*Tablette*/
 @media screen and (max-width: 750px) {
-
     .false {
         margin: 0;
     }
-
     .active {
         margin: 0;
     }

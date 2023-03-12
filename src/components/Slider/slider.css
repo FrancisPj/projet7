@@ -3,13 +3,13 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    border-radius: 25px;
 }
 
 .slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*height: 400px;*/
     position: relative;
     transition: all 0.5s ease-in-out;
 }
@@ -21,19 +21,19 @@
     object-position: 50% 50%;;
     border-radius: 25px;
     background-position: center;
-    background-objectFit: cover;
 }
+
 .prev,
 .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
+    /*width: 50px;
+    height: 50px;*/
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 30px;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -65,9 +65,12 @@
 }
 
 /*tablette*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .slide img {
         width: 100%;
         height:255px;
+    }
+    .count {
+        display: none;
     }
 }

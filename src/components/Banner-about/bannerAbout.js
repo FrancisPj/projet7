@@ -8,7 +8,6 @@ function BannerAbout () {
 return (
     <div className= { 'bannerAbout' }>
         <img className= {'bannerAbout' } src={bannerImg} alt={"Vue montagnes et forêts"}/>
-
     </div>
     )
 }

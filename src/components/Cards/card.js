@@ -9,11 +9,7 @@ function Card() {
                 {data.map((house) => (
                     <Link className={'cartGrid'} key={house.id} to={`logement/${house.id}`}>
                         <img src={house.cover} alt={'photos du logements locatif'}/>
-
-                            <Link className={'cart_text'} to={`logement/${house.id}`}>
-                                <p>{house.title}</p>
-                            </Link>
-
+                        <p className={'cart_text'} >{house.title}</p>
                     </Link>
                 ))}
             </div>

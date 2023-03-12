@@ -6,10 +6,8 @@ import Card from '../../components/Cards/card'
 function Home() {
     return (
         <>
-
-                <Banner/>
-                <Card/>
-
+            <Banner/>
+            <Card/>
         </>
     )
 }

@@ -1,3 +1,28 @@
+## Projet 7
+![img_2.png](img_2.png)
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_3.png](img_3.png)
+***
+**Mission : adaptation d'une maquette en projet react et router avec React-router, avec des composants individuel et réutilisable.**
+
+###Quelques précisions sur les fonctionnalités du site :
+
+####- Pour le défilement des photos dans la galerie (composant Gallery) :
+
+ - Si l'utilisateur se trouve à la première image et qu'il clique sur "Image précédente", la galerie affiche la dernière image.
+ - Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "Image suivante", la galerie affiche la première image. 
+ - S'il n'y a qu'une seule image, les boutons "Suivant" et "Précédent" n'apparaissent pas.
+ - La galerie doit toujours rester de la même hauteur, celle indiquée sur la maquette Figma.
+   - Les images seront donc coupées et centrées dans le cadre de l’image.
+   
+ **Collapse :** 
+  - Par défaut, les Collapses sont fermés à l'initialisation de la page. 
+    - Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
+    - Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
+
+
+***
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

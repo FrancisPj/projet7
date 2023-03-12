@@ -5,6 +5,7 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .errorTitle {
     font-size: clamp(96px,22.5vw,288px);
     font-weight: 700;

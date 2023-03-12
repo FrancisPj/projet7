@@ -23,7 +23,7 @@ function Appart() {
     const [logement, setLogement] = useState({
         title: [],
         location: [],
-        host:  [],
+        host: [],
         equipments: [],
         description: [],
         tags: [],
@@ -31,7 +31,7 @@ function Appart() {
         picture: [],
         rating: "",
 
-         });
+    });
 
     /* Si une erreur se produit lors de la récupération des données, elle est gérée à l'aide du hook "useState"  et un composant d'erreur est affiché. */
     const [error, setError] = useState(false);
@@ -61,21 +61,20 @@ function Appart() {
 
     }, [productId]);
 
-
     if (error) {
         return <div>Une erreur est survenue !</div>;
     }
 
     if (!logement) {
         return <div>
-            {<Error />}
+            {<Error/>}
         </div>;
     }
     return (
         <>
             <section className={'logement'}>
                 <div>
-                        <Slider pictures={ logement.pictures } />
+                    <Slider pictures={logement.pictures}/>
                 </div>
 
                 <div className={'logement_container'}>
@@ -93,8 +92,8 @@ function Appart() {
                         <div className="logement_users">
                             <h3>{logement.host.name}</h3>
                             <img src={logement.host.picture} alt={'Propriétaire du logement'}/>
-                        </div >
-                           {logement && logement.rating && <StarRating rating={logement.rating} />}
+                        </div>
+                        {logement && logement.rating && <StarRating rating={logement.rating}/>}
                     </div>
 
                 </div>

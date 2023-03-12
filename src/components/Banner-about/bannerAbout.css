@@ -9,15 +9,12 @@
 }
 
 .bannerAbout {
-
   width: 100%;
   height: 223px;
   z-index: -1;
   object-fit: cover;
-  filter: brightness(70%);
+  filter: brightness(80%);
 }
-
-
 
 /*Tablette*/
 @media screen and (max-width: 750px) {
@@ -36,7 +33,6 @@
 }
 /*Mobile*/
 @media screen and (max-device-width: 375px) {
-
     .bannerAbout{
     height:120px ;
     }
