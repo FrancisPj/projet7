@@ -16,6 +16,7 @@
   filter: brightness(80%);
 }
 
+
 /*Tablette*/
 @media screen and (max-width: 750px) {
     .banner{
