@@ -32,12 +32,11 @@ nav li {
     font-weight: 500;
 }
 
-.link:hover{
+.activated, .link:hover{
     text-decoration: underline;
 }
 
 .activated {
-    text-decoration: underline;
     color: #FF6060;
     padding-left: 20px;
     font-weight: 500;
@@ -59,7 +58,7 @@ nav li {
         text-transform: uppercase;
     }
     ul li {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     header {
