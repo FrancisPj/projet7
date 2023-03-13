@@ -1,10 +1,13 @@
-## Projet 7
+## Projet 7 :développer une application web avec React et React Router
 ![img_2.png](img_2.png)
-![img.png](img.png)
-![img_1.png](img_1.png)
+![img_4.png](img_4.png)
 ![img_3.png](img_3.png)
+    *** mobile ***
+![img_9.png](img_9.png)
+![img_10.png](img_10.png)
+![img_8.png](img_8.png)
 ***
-**Mission : adaptation d'une maquette en projet react et router avec React-router, avec des composants individuel et réutilisable.**
+**Mission : adaptation d'une maquette figma en projet react et router avec React-router, avec des composants individuel et réutilisable.**
 
 ###Quelques précisions sur les fonctionnalités du site :
 
@@ -20,9 +23,18 @@
   - Par défaut, les Collapses sont fermés à l'initialisation de la page. 
     - Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
     - Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
+ ***
+    
+Je commence par installer 'npx create-react-app' et le nom du projet.
 
+Je lance avec un "npm start"
+
+J'installe 'npm i react-router-dom'
+
+Ouvrir http://localhost:3000/ pour afficher le projet
 
 ***
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

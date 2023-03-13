@@ -61,9 +61,13 @@ nav li {
     ul li {
         font-size: 12px;
     }
+
     header {
         margin: 15px 20px 0 20px;
         align-items: initial;
+    }
+    * {
+        box-sizing: unset;
     }
 }
 
