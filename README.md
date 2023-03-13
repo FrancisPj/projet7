@@ -1,11 +1,13 @@
 ## Projet 7 :développer une application web avec React et React Router
-![img_2.png](img_2.png)
-![img_4.png](img_4.png)
-![img_3.png](img_3.png)
-    *** mobile ***
-![img_9.png](img_9.png)
-![img_10.png](img_10.png)
-![img_8.png](img_8.png)
+![img_2.png](../projet_7/src/readImages/img_2.png)
+![img_4.png](../projet_7/src/readImages/img_4.png)
+![img_3.png](../projet_7/src/readImages/img_3.png)
+
+***
+Mobile
+![img_9.png](../projet_7/src/readImages/img_9.png)
+![img_10.png](../projet_7/src/readImages/img_10.png)
+![img_8.png](../projet_7/src/readImages/img_8.png)
 ***
 **Mission : adaptation d'une maquette figma en projet react et router avec React-router, avec des composants individuel et réutilisable.**
 
