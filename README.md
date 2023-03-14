@@ -4,7 +4,7 @@
 ![img_3.png](img_3.png)
 
 ***
-Mobile
+
 ![img_9.png](img_9.png)
 ![img_10.png](img_10.png)
 ![img_8.png](img_8.png)
