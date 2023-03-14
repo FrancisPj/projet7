@@ -24,9 +24,12 @@ const Router = () => {
                     <Route path="logement/:productId" element={<Appart/>}/>
                 </Route>
 
-                <Route element={<LayoutBlank/>}>
+
+                <Route element={<LayoutBlank />}>
                     <Route path="*" element={<Error />} />
+                    <Route path="logement/error" element={<Error />}/>
                 </Route>
+
 
             </Routes>
 
