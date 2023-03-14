@@ -11,9 +11,9 @@
 ***
 **Mission : adaptation d'une maquette figma en projet react et router avec React-router, avec des composants individuel et réutilisable.**
 
-###Quelques précisions sur les fonctionnalités du site :
+### Quelques précisions sur les fonctionnalités du site :
 
-####- Pour le défilement des photos dans la galerie (composant Gallery) :
+#### - Pour le défilement des photos dans la galerie (composant Gallery) :
 
  - Si l'utilisateur se trouve à la première image et qu'il clique sur "Image précédente", la galerie affiche la dernière image.
  - Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "Image suivante", la galerie affiche la première image. 
