@@ -10,7 +10,6 @@ import Slider from "../../components/Slider/slider";
 import {StarRating} from "../../components/StarRating/starRating";
 import Error from "../Error/error";
 
-
 function Appart() {
 
     const {productId} = useParams();
@@ -48,7 +47,7 @@ function Appart() {
         return <Error />;
 
     }
-    console.log('Error')
+
     return (
         <>
             <section className={'logement'}>
