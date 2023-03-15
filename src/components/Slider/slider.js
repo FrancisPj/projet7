@@ -8,9 +8,7 @@ const ImageSlider = ( {pictures} ) => {
      /* La variable isSingleImage évalue si le nombre d'images est égal à 1 */
     const isSingleImage = pictures.length === 1;
 
-//Les boutons et le compteur sont dans (!isSingleImage) qui vérifie si isSingleImage est faux .Les boutons et le compteur seront affichés ou pas.
-
-    /*fonction ternaire*/
+    /*fonction ternaire pour déterminer quelle index de la photo doit être affichée après avoir cliqué sur les boutons "Suivant" ou "Précédent" dans un carrousel de photos.*/
     const nextSlide = () => {
         setCurrentIndex(currentIndex === pictures.length - 1 ? 0 : currentIndex + 1);
     };
@@ -19,10 +17,11 @@ const ImageSlider = ( {pictures} ) => {
         setCurrentIndex(currentIndex === 0 ? pictures.length - 1 : currentIndex - 1);
     };
 
+//Les boutons et le compteur sont dans (!isSingleImage) qui vérifie si isSingleImage est faux .Les boutons et le compteur seront affichés ou pas.
     return (
         <div className="carousel">
             <div className="slide">
-                <img src={pictures[currentIndex]}  />
+                <img src={pictures[currentIndex]} alt={""} />
             </div>
 
             {!isSingleImage && (

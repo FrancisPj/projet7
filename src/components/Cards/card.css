@@ -55,7 +55,7 @@
 }
 
 /*Deskop*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
      .cart{
           margin-top: 20px;
           padding: 0;

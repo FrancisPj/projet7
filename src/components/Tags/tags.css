@@ -30,7 +30,7 @@
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .tags {
         font-size: 7px;
         width: 90px;

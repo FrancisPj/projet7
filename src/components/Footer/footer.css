@@ -22,7 +22,7 @@
 }
 
 /*Tablette*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
    .footer .logo-white{
        height: 50px;
        margin:auto;

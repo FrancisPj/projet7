@@ -111,7 +111,7 @@
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .logement_content{flex-direction: column;
     }
     .logement_tags{

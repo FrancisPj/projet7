@@ -19,7 +19,7 @@ function Appart() {
         equipments: [],
         pictures: [],
         rating: "",
-        host: { name: "", picture: "" },
+        host: {name: "", picture: ""},
     });
 
     const [error, setError] = useState(false);
@@ -44,8 +44,7 @@ function Appart() {
     }
 
     if (logement.id === undefined) {
-        return <Error />;
-
+        return <Error/>;
     }
 
     return (

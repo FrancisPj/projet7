@@ -1,8 +1,7 @@
 .mainAboutContainer {
     width: auto;
     padding-inline: 100px;
-    flex-grow: 1;
-}
+ }
 
 .aboutContainer{
     display: flex;
@@ -10,15 +9,15 @@
 }
 
 .collapseAbout{
-    width: 90%;
+    width: 83%;
     margin-top: 40px;
     font-size: 24px;
 }
 
 /*Deskop*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .mainAboutContainer {
-        padding-inline: 15px;
+        padding-inline: 20px;
         min-height: 0;
     }
     .collapseAbout{
@@ -27,10 +26,4 @@
          }
 }
 
-/*Mobile*/
-@media screen and (max-device-width: 375px) {
-    .mainAboutContainer {
-      /*  padding-inline: 30px;*/
 
-    }
-}

@@ -30,7 +30,7 @@
 }
 
 /*Tablette*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .banner{
         height:120px ;
     }
