@@ -15,20 +15,22 @@
     cursor: pointer;
 }
 
+/* La classe "accordionContent" définit initialement la propriété "visibility" à "hidden" et la propriété "opacity" à "0", ce qui cache le contenu du collapse. */
 .accordionContent {
     visibility: hidden;
     height: auto;
     opacity: 0;
-    overflow: hidden;
+    overflow: hidden; /* pour masquer tout contenu supplémentaire qui ne rentre pas dans le cadre du collapse.*/
     padding: 0 1rem;
     transition: all .15s ease-in;
     margin-top: -15px;
 }
 
+/* La classe "accordionContent" définit la propriété "visibility" à "visible" et la propriété "opacity" à "1", ce qui fait apparaître le contenu avec une transition de durée "0.3s".*/
 .active .accordionContent {
     display: block;
     visibility: visible;
-    overflow: visible;
+    overflow: visible; /* Le contenu supplémentaire peut déborder.*/
     padding: 30px;
     transition: 0.3s;
     opacity: 1;

@@ -17,7 +17,9 @@ const ImageSlider = ( {pictures} ) => {
         setCurrentIndex(currentIndex === 0 ? pictures.length - 1 : currentIndex - 1);
     };
 
-//Les boutons et le compteur sont dans (!isSingleImage) qui vérifie si isSingleImage est faux .Les boutons et le compteur seront affichés ou pas.
+/* Les boutons et le compteur sont dans (!isSingleImage) qui vérifie si isSingleImage est faux .Les boutons et le compteur seront affichés ou pas.
+   On affiche le numéro de l'image actuelle (déterminé par "currentIndex") et le nombre total d'images dans le tableau "pictures".*/
+
     return (
         <div className="carousel">
             <div className="slide">

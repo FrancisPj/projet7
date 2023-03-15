@@ -8,7 +8,7 @@ function Card() {
             <div className={'cart-container'}>
                 {data.map((house) => (
                     <Link className={'cartGrid'} key={house.id} to={`logement/${house.id}`}>
-                        <img src={house.cover} alt={'photos du logements locatif'}/>
+                        <img src={house.cover} alt={'photos du logement locatif'}/>
                         <p className={'cart_text'} >{house.title}</p>
                     </Link>
                 ))}
