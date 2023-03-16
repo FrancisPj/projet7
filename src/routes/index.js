@@ -12,6 +12,10 @@ import LayoutBlank from "../layouts/LayoutBlank";
 import Error from "../pages/Error/error";
 import Appart from "../pages/Logement/house";
 
+
+/* 'Route' est celui qui indique à l'"Outlet" quel composant doit être rendu en fonction de l'URL actuelle. */
+/* Le 'prop' 'element' de 'Route' spécifie le composant à rendre lorsque l'URL correspond au chemin 'path' défini. */
+
 const Router = () => {
     return (
 

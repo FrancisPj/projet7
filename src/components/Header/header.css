@@ -17,7 +17,7 @@ header {
 ul {
     display: flex;
     flex-wrap: nowrap;
-    gap: 25px;
+    gap: 55px;
     list-style: none;
 }
 
@@ -53,7 +53,7 @@ nav li {
     ul {
         display: flex;
         flex-wrap: nowrap;
-        gap: 5px;
+        gap: 18px;
         text-transform: uppercase;
     }
     ul li {

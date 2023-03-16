@@ -23,7 +23,7 @@ const ImageSlider = ( {pictures} ) => {
     return (
         <div className="carousel">
             <div className="slide">
-                <img src={pictures[currentIndex]} alt={""} />
+                <img src={pictures[currentIndex]} alt={"Appartements"} />
             </div>
 
             {!isSingleImage && (
